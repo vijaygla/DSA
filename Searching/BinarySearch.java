@@ -26,19 +26,13 @@ public class BinarySearch {
         else return bSearch(arr, mid+1, high, x);
     }
 
-
     public static void main(String[] args) {
         int arr[] = {1,2,3,4,5,6,7};
         int x = 6;
         int result=binarySearch(arr, x);
         System.out.println("Index of x iterative :"+result);
 
-
         int ans = bSearch(arr, 0, arr.length-1, x);
         System.out.println("Index of x by recursive:"+ans);
     }
-
 }
-
-
-
