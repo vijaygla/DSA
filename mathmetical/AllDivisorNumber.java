@@ -42,6 +42,7 @@
 
 
 // Most Efficient Way Which print the divisor in order :-
+
 public class AllDivisorNumber {
     public static void divisorNumber(int n){
         System.out.println("All the Divisor of "+ n +" :-");
