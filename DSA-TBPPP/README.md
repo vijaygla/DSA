@@ -6,3 +6,8 @@
 - Variables: Names should be in mixed case.
 - Constants: Names should be in uppercase.
 
+## To Compile and Run code with package name
+- javac <package-name>/<file-name>.java
+- java <package-name>.<filename>
+
+
