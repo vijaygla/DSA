@@ -3,7 +3,6 @@
 import java.util.*;
 public class HashSet1 {
     public static void main(String[] args) {
-        System.out.println();
         HashSet<Integer> set = new HashSet<>();
         // Insert in set Varible 
         set.add(1);

@@ -23,4 +23,3 @@ public class _1493 {
         System.out.println(longestSubarray(nums));
     }
 }
-c

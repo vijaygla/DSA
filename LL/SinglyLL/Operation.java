@@ -1,9 +1,12 @@
 public class Operation {
+
     Node head;
     private int size;
-    Operation(){
+
+    Operation() {
         this.size = 0;
     }
+    
     class Node {
         String data;
         Node next;
@@ -35,6 +38,7 @@ public class Operation {
             return;
         }
         Node currNode = head;
+        
         while(currNode.next != null){
             currNode = currNode.next; 
         }

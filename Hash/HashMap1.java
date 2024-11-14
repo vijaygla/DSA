@@ -11,7 +11,7 @@ public class HashMap1 {
         map.put("china",150); 
         map.put("India",140);//update if exist other wise create new
         System.out.println(map);
-        System.out.println();
+
 
         // Search 
         if(map.containsKey("Indonesia")){
@@ -28,24 +28,19 @@ public class HashMap1 {
 
         // Iteration in HashMap - .getKey()
         for(Map.Entry<String,Integer> element : map.entrySet()){
-            System.out.print(element.getKey()+" # ");
+            System.out.print(element.getKey()+" --> ");
             System.out.println(element.getValue());
         }
         System.out.println();
         // second method - .keySet()
         Set<String> key = map.keySet();
         for(String value : key){
-            System.out.println(value+" @ "+map.get(value));
+            System.out.println(value+" --> " + map.get(value));
         }
         System.out.println();
 
         // delete 
         map.remove("china");
         System.out.println(map);
-        System.out.println();
-
     }
 }
-
-
-

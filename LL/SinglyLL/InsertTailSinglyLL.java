@@ -1,6 +1,6 @@
 public class InsertTailSinglyLL {
     
-    public static Node insertEnd(Node head,int x){
+    public static Node insertAtEnd(Node head,int x){
         Node temp = new Node(x);
         if(head == null){
             return temp;
@@ -23,10 +23,10 @@ public class InsertTailSinglyLL {
     
     public static void main(String[] args) {
         Node head = null;
-        head = insertEnd(head, 10);
-        head = insertEnd(head, 20);
-        head = insertEnd(head, 30);
-        head = insertEnd(head, 40);
+        head = insertAtEnd(head, 10);
+        head = insertAtEnd(head, 20);
+        head = insertAtEnd(head, 30);
+        head = insertAtEnd(head, 40);
         printLL(head);
     }
 
