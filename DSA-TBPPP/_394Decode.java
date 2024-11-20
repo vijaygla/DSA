@@ -3,35 +3,35 @@ import java.util.Stack;
 public class _394Decode {
 
   public static String decodeString(String s) {
-    Stack<Integer> countStack = new Stack<>();
-    Stack<String> stringStack = new Stack<>();
-    String currentString = "";
+    Stack<Integer> numStack = new Stack<>();
+    Stack<String> strStack = new Stack<>();
+    String currStr = "";
     int k = 0;
 
     for (char ch : s.toCharArray()) {
       if (Character.isDigit(ch)) {
         k = k * 10 + (ch - '0');
       } else if (ch == '[') {
-        countStack.push(k);
-        stringStack.push(currentString);
-        currentString = "";
+        numStack.push(k);
+        strStack.push(currStr);
+        currStr = "";
         k = 0;
       } else if (ch == ']') {
-        StringBuilder decodedString = new StringBuilder(stringStack.pop());
-        int currentK = countStack.pop();
+        StringBuilder sb = new StringBuilder(strStack.pop());
+        int currentK = numStack.pop();
         for (int i = 0; i < currentK; i++) {
-          decodedString.append(currentString);
+          sb.append(currStr);
         }
-        currentString = decodedString.toString();
+        currStr = sb.toString();
       } else {
-        currentString += ch;
+        currStr += ch;
       }
     }
-    return currentString;
+    return currStr;
   }
 
   public static void main(String[] args) {
-    String s = "3[a2[c]]";
+    String s = "3[a]2[bc]";
     System.out.println("OUTPUT:"+ decodeString(s));
   }
 }
