@@ -10,7 +10,7 @@ public class AdjacencyList {
             this.des=d;
             this.wt=w;
         }
-    } 
+    }
 
     public static void createGraph(ArrayList<edge> graph[]){
         for(int i=0;i<graph.length;i++){
@@ -32,7 +32,7 @@ public class AdjacencyList {
 
     public static void main(String[] args) {
         int v = 4;
-        ArrayList <edge> graph[] = new ArrayList[v];
+        ArrayList<edge> graph[] = new ArrayList[v];
         createGraph(graph);
 
         // print 2's neighbour
@@ -43,6 +43,3 @@ public class AdjacencyList {
 
     }
 }
-
-
-
