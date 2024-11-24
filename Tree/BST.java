@@ -4,107 +4,105 @@ public class BST {
         int data;
         Node left;
         Node right;
-        Node(int data){
+
+        Node(int data) {
             this.data = data;
+            this.left = null;
+            this.right = null;
         }
     }
 
-    public static Node insert (Node root,int val){
-        if(root == null){
-            root = new Node(val);
+    public static Node insertNode(Node root, int k) {
+        if (root == null) {
+            root = new Node(k);
             return root;
         }
-        if(root.data > val){
-            // left Sub tree formed 
-            root.left = insert(root.left,val);
-        }
-        else {
-            root.right = insert(root.right,val);
+        if (root.data > k) {
+            root.left = insertNode(root.left, k);
+        } else {
+            root.right = insertNode(root.right, k);
         }
         return root;
     }
 
-    public static void inOrder (Node root){
-        if(root == null){
-            return;
-        }
-        inOrder(root.left);
-        System.out.print(root.data+" ");
-        inOrder(root.right);
-    }
-
-    public static boolean search (Node root , int key){
-        if(root == null){
+    public static boolean searchNode(Node root, int k) {
+        if (root == null) {
             return false;
         }
-        if(root.data > key){
-            return search(root.left, key);
-        }
-        else if(root.data == key){
+        if (root.data > k) {
+            return searchNode(root.left, k);
+        } else if (root.data == k) {
             return true;
-        }
-        else {
-            return search(root.right, key);
+        } else {
+            return searchNode(root.right, k);
         }
     }
+    
 
-    public static Node deletNode(Node root,int val){
-        if(root.data > val){
-            root.left = deletNode(root.left, val);
+    public static Node deleteNode(Node root, int k) {
+        if (root.data > k) {
+            root.left = deleteNode(root.left, k);
         }
-        else if(root.data < val){
-            root.right = deletNode(root.right, val);
+        else if (root.data < k) {
+            root.right = deleteNode(root.right, k);
         }
-        else { //root.data == val 
+        else {
             // case 1
-            if(root.left == null && root.right == null){
+            if (root.left == null && root.right == null) {
                 return null;
             }
+
             // case 2
-            if(root.left == null){
+            if (root.left == null) {
                 return root.right;
-            }
-            else if(root.right == null){
+            } 
+            else if (root.right == null) {
                 return root.left;
             }
+
             // case 3
-            Node IS = inorderSuccessor(root.right);
-            root.data = IS.data;
-            root.right = deletNode(root.right,IS.data);
+            Node inOrderSuccessor = successorNode(root.right);
+            root.data = inOrderSuccessor.data;
+            root.right = deleteNode(root.right, inOrderSuccessor.data);
         }
         return root;
     }
 
-    public static Node inorderSuccessor(Node root){
-        while(root.left != null){
+    // successorNode
+    public static Node successorNode(Node root) {
+        while (root.left != null) {
             root = root.left;
         }
         return root;
     }
 
+    // Print the Tree using the preOrder traversal method
+    public static void printTree(Node root) {
+        if (root == null) {
+            return;
+        }
+        System.out.print(root.data + " ");
+        printTree(root.left);
+        printTree(root.right);
+    }
+
     public static void main(String[] args) {
-        int value [] = {5,1,3,4,2,7};
+        int kue[] = { 5, 1, 3, 4, 2, 7 };
         Node root = null;
 
-        for(int i=0;i<value.length;i++){
-            root = insert(root, value[i]);
+        for (int i = 0; i < kue.length; i++) {
+            root = insertNode(root, kue[i]);
         }
 
-        inOrder(root);
+        System.out.print("Tree before delete: ");
+        printTree(root);
         System.out.println();
 
-        if(search(root, 9)){
-            System.out.println("Found");
-        }
-        else{
-            System.out.println("Not Found");
-        }
+        System.out.println(searchNode(root, 9));
 
-        deletNode(root, 7);
-        inOrder(root);
-        
+        System.out.print("Tree after delete: ");
+        deleteNode(root, 7);
+        printTree(root);
+
     }
 }
-
-
-// IN BST all the node are in sorted incresing order 
