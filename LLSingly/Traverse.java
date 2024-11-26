@@ -1,11 +1,23 @@
 public class Traverse {
+
+    static class Node {
+        int data;
+        Node next;
+
+        Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+
     // traverse and printLL
     public static void printLL(Node head){
         Node curr = head;
         while(curr != null){
-            System.out.println(curr.data+" at address "+curr);
+            System.out.print(curr.data+"--> ");
             curr = curr.next;
         }
+        System.out.print("null");
     }
 
     public static void main(String args[]){
@@ -15,5 +27,4 @@ public class Traverse {
         head.next.next.next = new Node(40);
         printLL(head);
     }
-
 }
