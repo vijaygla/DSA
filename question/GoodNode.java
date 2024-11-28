@@ -1,5 +1,3 @@
-package question;
-
 public class GoodNode {
 
   static class TreeNode {
