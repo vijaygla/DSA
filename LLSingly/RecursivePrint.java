@@ -1,9 +1,19 @@
 public class RecursivePrint {
 
-    public static void printLLRecurive(Node head){
-        if(head == null)
+    public class Node {
+        int data;
+        Node next;
+
+        Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+
+    public static void printLLRecurive(Node head) {
+        if (head == null)
             return;
-        System.out.println(head.data+" ");
+        System.out.println(head.data + " ");
         printLLRecurive(head.next);
     }
 

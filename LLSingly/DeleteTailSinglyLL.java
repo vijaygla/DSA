@@ -1,20 +1,32 @@
 public class DeleteTailSinglyLL {
 
-    public static Node deleteTail(Node head){
-        if(head == null) return null;
-        if(head.next == null) return null;
+    public class Node {
+        int data;
+        Node next;
+
+        Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+
+    public static Node deleteTail(Node head) {
+        if (head == null)
+            return null;
+        if (head.next == null)
+            return null;
         Node curr = head;
-        while(curr.next.next != null)
+        while (curr.next.next != null)
             curr = curr.next;
-        curr.next=null;  
+        curr.next = null;
         return head;
     }
 
-    public static void printLL(Node head){
+    public static void printLL(Node head) {
         Node curr = head;
-        while(curr != null){
+        while (curr != null) {
             System.out.println(curr.data + " ");
-            curr=curr.next;
+            curr = curr.next;
         }
     }
 

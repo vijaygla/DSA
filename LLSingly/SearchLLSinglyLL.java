@@ -1,39 +1,50 @@
 public class SearchLLSinglyLL {
-    
-    // Iterative function 
-    public static int searchNodePosition(Node head, int x){
+
+    public class Node {
+        int data;
+        Node next;
+
+        Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+
+    // Iterative function
+    public static int searchNodePosition(Node head, int x) {
         int pos = 1;
         Node curr = head;
-        while(curr != null){
-            if(curr.data == x){
+        while (curr != null) {
+            if (curr.data == x) {
                 return pos;
-            }
-            else{
+            } else {
                 pos++;
-                curr=curr.next;
+                curr = curr.next;
             }
         }
         return -1;
     }
 
-    // Recursive Function 
-    public static int searchNodePositionRecursive(Node head,int x){
-        if(head == null) return -1;
-        if(head.data == x){
+    // Recursive Function
+    public static int searchNodePositionRecursive(Node head, int x) {
+        if (head == null)
+            return -1;
+        if (head.data == x) {
             return 1;
-        }
-        else{
+        } else {
             int res = searchNodePositionRecursive(head.next, x);
-            if(res == -1) return -1;
-            else return (res+1);
+            if (res == -1)
+                return -1;
+            else
+                return (res + 1);
         }
     }
 
-    public static void printLL(Node head){
-        Node curr=head;
-        while(curr != null){
-            System.out.println(curr.data+" ");
-            curr=curr.next;
+    public static void printLL(Node head) {
+        Node curr = head;
+        while (curr != null) {
+            System.out.println(curr.data + " ");
+            curr = curr.next;
         }
     }
 
@@ -46,8 +57,7 @@ public class SearchLLSinglyLL {
         // System.out.println("Position : "+result);
         printLL(head);
         int result = searchNodePositionRecursive(head, 30);
-        System.out.println("Position : "+result);
+        System.out.println("Position : " + result);
     }
 
 }
-

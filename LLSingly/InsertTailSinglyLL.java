@@ -1,26 +1,36 @@
 public class InsertTailSinglyLL {
-    
-    public static Node insertAtEnd(Node head,int x){
+
+    public class Node {
+        int data;
+        Node next;
+
+        Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+
+    public static Node insertAtEnd(Node head, int x) {
         Node temp = new Node(x);
-        if(head == null){
+        if (head == null) {
             return temp;
         }
         Node curr = head;
-        while(curr.next != null){
+        while (curr.next != null) {
             curr = curr.next;
         }
-        curr.next=temp;
+        curr.next = temp;
         return head;
     }
 
-    public static void printLL(Node head){
+    public static void printLL(Node head) {
         Node curr = head;
-        while(curr != null){
+        while (curr != null) {
             System.out.println(curr.data + " ");
             curr = curr.next;
         }
     }
-    
+
     public static void main(String[] args) {
         Node head = null;
         head = insertAtEnd(head, 10);
@@ -31,4 +41,3 @@ public class InsertTailSinglyLL {
     }
 
 }
-
