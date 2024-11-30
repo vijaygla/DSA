@@ -1,15 +1,24 @@
 public class InsertAtEnd {
 
-    // Naive Approch 
-    public static Node insertAtEnd(Node head,int x){
+    static class Node {
+        int data;
+        Node next;
+
+        Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+
+    // Naive Approch
+    public static Node insertAtEnd(Node head, int x) {
         Node temp = new Node(x);
-        if(head == null){
+        if (head == null) {
             temp.next = temp;
             return temp;
-        }
-        else{
+        } else {
             Node curr = head;
-            while(curr.next != head)
+            while (curr.next != head)
                 curr = curr.next;
             curr.next = temp;
             temp.next = head;
@@ -17,14 +26,13 @@ public class InsertAtEnd {
         }
     }
 
-    // Efficient Approch 
-    public static Node insertNodeAtEnd(Node head,int x){
+    // Efficient Approch
+    public static Node insertNodeAtEnd(Node head, int x) {
         Node temp = new Node(x);
-        if(head == null){
+        if (head == null) {
             temp.next = temp;
             return temp;
-        }
-        else{
+        } else {
             temp.next = head.next;
             head.next = temp;
             int t = temp.data;
@@ -34,18 +42,18 @@ public class InsertAtEnd {
         }
     }
 
-    public static void printCircularLL(Node head){
-        if(head == null) return;
+    public static void printCircularLL(Node head) {
+        if (head == null)
+            return;
         Node n = head;
-        do{
-            System.out.println(n.data+" ");
-            n=n.next;
-        }
-        while(n != head);
+        do {
+            System.out.println(n.data + " ");
+            n = n.next;
+        } while (n != head);
     }
 
     public static void main(String[] args) {
-        Node head = null;//intialy head is empty 
+        Node head = null;// intialy head is empty
         head = insertAtEnd(head, 10);
         head = insertAtEnd(head, 20);
 
@@ -58,5 +66,3 @@ public class InsertAtEnd {
     }
 
 }
-
-
