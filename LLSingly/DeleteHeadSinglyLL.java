@@ -1,6 +1,6 @@
 public class DeleteHeadSinglyLL {
 
-    public class Node {
+    static class Node {
         int data;
         Node next;
 
@@ -21,9 +21,10 @@ public class DeleteHeadSinglyLL {
     public static void printLL(Node head) {
         Node curr = head;
         while (curr != null) {
-            System.out.println(curr.data + " ");
+            System.out.print(curr.data + " ");
             curr = curr.next;
         }
+        System.out.println();
     }
 
     public static void main(String[] args) {
@@ -34,5 +35,4 @@ public class DeleteHeadSinglyLL {
         head = deleteHead(head);
         printLL(head);
     }
-
 }

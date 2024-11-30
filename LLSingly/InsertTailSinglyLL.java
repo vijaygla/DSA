@@ -1,6 +1,6 @@
 public class InsertTailSinglyLL {
 
-    public class Node {
+    static class Node {
         int data;
         Node next;
 
@@ -26,9 +26,10 @@ public class InsertTailSinglyLL {
     public static void printLL(Node head) {
         Node curr = head;
         while (curr != null) {
-            System.out.println(curr.data + " ");
+            System.out.print(curr.data + " ");
             curr = curr.next;
         }
+        System.out.println();
     }
 
     public static void main(String[] args) {
@@ -39,5 +40,4 @@ public class InsertTailSinglyLL {
         head = insertAtEnd(head, 40);
         printLL(head);
     }
-
 }

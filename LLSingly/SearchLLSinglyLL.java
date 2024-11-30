@@ -1,6 +1,6 @@
 public class SearchLLSinglyLL {
 
-    public class Node {
+    static class Node {
         int data;
         Node next;
 
@@ -43,9 +43,10 @@ public class SearchLLSinglyLL {
     public static void printLL(Node head) {
         Node curr = head;
         while (curr != null) {
-            System.out.println(curr.data + " ");
+            System.out.print(curr.data + " ");
             curr = curr.next;
         }
+        System.out.println();
     }
 
     public static void main(String[] args) {
@@ -54,10 +55,9 @@ public class SearchLLSinglyLL {
         head.next.next = new Node(30);
 
         // int result = searchNodePosition(head, 30);
-        // System.out.println("Position : "+result);
+        // System.out.println("Position : " + result);
         printLL(head);
         int result = searchNodePositionRecursive(head, 30);
         System.out.println("Position : " + result);
     }
-
 }

@@ -1,6 +1,6 @@
 public class RecursivePrint {
 
-    public class Node {
+    static class Node {
         int data;
         Node next;
 
@@ -10,11 +10,11 @@ public class RecursivePrint {
         }
     }
 
-    public static void printLLRecurive(Node head) {
+    public static void printLLRecursive(Node head) {
         if (head == null)
             return;
-        System.out.println(head.data + " ");
-        printLLRecurive(head.next);
+        System.out.print(head.data + " ");
+        printLLRecursive(head.next);
     }
 
     public static void main(String[] args) {
@@ -22,7 +22,6 @@ public class RecursivePrint {
         head.next = new Node(20);
         head.next.next = new Node(30);
         head.next.next.next = new Node(40);
-        printLLRecurive(head);
+        printLLRecursive(head);
     }
-
 }
