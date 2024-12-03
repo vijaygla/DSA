@@ -14,7 +14,7 @@ public class PrintCircularLL {
         if(head == null) return;
         System.out.println(head.data+" ");
         for(Node r=head.next;r != head;r=r.next){
-            System.out.println(r.data+" ");
+            System.out.print(r.data+" ");
         }
     }
 

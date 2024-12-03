@@ -47,7 +47,7 @@ public class InsertAtEnd {
             return;
         Node n = head;
         do {
-            System.out.println(n.data + " ");
+            System.out.print(n.data + " ");
             n = n.next;
         } while (n != head);
     }
