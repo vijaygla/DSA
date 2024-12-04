@@ -10,7 +10,7 @@ public class InsertAtEnd {
         }
     }
 
-    // Naive Approch
+    // Naive Approach
     public static Node insertAtEnd(Node head, int x) {
         Node temp = new Node(x);
         if (head == null) {
@@ -26,7 +26,7 @@ public class InsertAtEnd {
         }
     }
 
-    // Efficient Approch
+    // Efficient Approach
     public static Node insertNodeAtEnd(Node head, int x) {
         Node temp = new Node(x);
         if (head == null) {
@@ -50,10 +50,11 @@ public class InsertAtEnd {
             System.out.print(n.data + " ");
             n = n.next;
         } while (n != head);
+        System.out.println();
     }
 
     public static void main(String[] args) {
-        Node head = null;// intialy head is empty
+        Node head = null; // initially head is empty
         head = insertAtEnd(head, 10);
         head = insertAtEnd(head, 20);
 
@@ -61,8 +62,7 @@ public class InsertAtEnd {
         head = insertNodeAtEnd(head, 40);
         head = insertNodeAtEnd(head, 50);
 
-        System.out.println("Insert Node by using Naive and Efficeint :");
+        System.out.println("Insert Node by using Naive and Efficient Approaches:");
         printCircularLL(head);
     }
-
 }
