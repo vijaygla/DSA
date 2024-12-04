@@ -18,3 +18,4 @@ public class CollectionsSort {
 }
 
 
+// it is use to sort the array list but to sort the array use --> Arrays.sort();
