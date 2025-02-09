@@ -11,3 +11,11 @@
 - java <package-name>.<filename>
 
 
+
+# When this types of error Run both the command with corrrect file and folder name
+Error: Could not find or load main class packageFolder.PrintEven
+Caused by: java.lang.ClassNotFoundException: packageFolder.PrintEven
+`javac packageFolder/*.java packageFolder2/*.java`
+`java -cp . packageFolder.PrintEven`
+
+
