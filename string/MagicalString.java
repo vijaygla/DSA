@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 class Solution {
     public int magicalString(int n) {
@@ -42,4 +40,5 @@ class Solution {
 // explanation: The first 10 elements of the magical string is [1, 2, 2, 1, 1,
 // 2, 1, 2, 2, 1]. The number of '1's in the first 10 numbers of the magical
 // string is 5. So, the output is 5.
+
 
