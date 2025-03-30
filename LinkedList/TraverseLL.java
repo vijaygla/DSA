@@ -1,5 +1,3 @@
-package LinkedList;
-
 public class TraverseLL {
 
     static class Node {
