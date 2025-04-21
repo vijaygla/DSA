@@ -1,4 +1,4 @@
-public class QueueByCircularArray {
+public class UsingCircularArray {
 
     static class Queue {
         int arr[];
