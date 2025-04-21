@@ -1,4 +1,5 @@
 # Key Differences 
+`Exaple of Fibonacci series in using both method`
 1. **Memoization**: Top-down approach using recursion and storing results of subproblems to avoid redundant calculations.
 ```
 class Solution {
@@ -32,5 +33,6 @@ class Solution {
         return dp[n];
     }
 }
+
 ```
 3. 
