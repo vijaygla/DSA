@@ -1,3 +1,5 @@
+import java.util.*;
+
 class LengthOfLongestSubstring {
     public int lengthOfLongestSubstring(String s) {
         HashSet<Character> set = new HashSet<>();
@@ -15,3 +17,4 @@ class LengthOfLongestSubstring {
         return maxLength;
     }
 }
+

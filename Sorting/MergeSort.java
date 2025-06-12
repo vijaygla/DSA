@@ -12,21 +12,21 @@ public class MergeSort {
 
     private static void merge(int[] arr, int left, int mid, int right) {
         int i, j, k;
-        int n1 = mid - left + 1;
-        int n2 = right - mid;
+        int m = mid - left + 1;
+        int n = right - mid;
 
-        int[] leftArr = new int[n1];
-        int[] rightArr = new int[n2];
+        int[] leftArr = new int[m];
+        int[] rightArr = new int[n];
 
-        for (i = 0; i < n1; ++i)
+        for (i = 0; i < m; ++i)
             leftArr[i] = arr[left + i];
-        for (j = 0; j < n2; ++j)
+        for (j = 0; j < n; ++j)
             rightArr[j] = arr[mid + 1 + j];
 
         i = 0;
         j = 0;
         k = left;
-        while (i < n1 && j < n2) {
+        while (i < m && j < n) {
             if (leftArr[i] <= rightArr[j]) {
                 arr[k++] = leftArr[i++];
             } else {
@@ -34,11 +34,11 @@ public class MergeSort {
             }
         }
 
-        while (i < n1) {
+        while (i < m) {
             arr[k++] = leftArr[i++];
         }
 
-        while (j < n2) {
+        while (j < n) {
             arr[k++] = rightArr[j++];
         }
     }
@@ -58,3 +58,4 @@ public class MergeSort {
         System.out.println("Sorted array: " + Arrays.toString(arr));
     }
 }
+
