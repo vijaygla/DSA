@@ -1,22 +1,24 @@
 import java.util.*;
 
 public class BFS {
+
     static class edge {
         int so;
         int des;
-        public edge(int s,int d){
+
+        public edge(int s, int d) {
             this.so = s;
             this.des = d;
         }
     }
 
-    public static void createGraph(ArrayList<edge> graph[]){
-        for(int i=0;i<graph.length;i++){
+    public static void createGraph(ArrayList<edge> graph[]) {
+        for (int i = 0; i < graph.length; i++) {
             graph[i] = new ArrayList<edge>();
         }
-        
+
         graph[0].add(new edge(0, 1));
-        
+
         graph[0].add(new edge(0, 2));
         graph[1].add(new edge(1, 0));
         graph[1].add(new edge(1, 3));
@@ -35,24 +37,23 @@ public class BFS {
 
     }
 
-    public static void bfs(ArrayList<edge> graph[],int v,boolean visited[],int start){
+    public static void bfs(ArrayList<edge> graph[], int v, boolean visited[], int start) {
         Queue<Integer> q = new LinkedList<>();
         q.add(start);
 
-        while(!q.isEmpty()){
+        while (!q.isEmpty()) {
             int curr = q.remove();
-            if(visited[curr] == false){
-                System.out.print(curr+"  ");
+            if (visited[curr] == false) {
+                System.out.print(curr + "  ");
                 visited[curr] = true;
 
-                for(int i=0;i<graph[curr].size();i++){
+                for (int i = 0; i < graph[curr].size(); i++) {
                     edge e = graph[curr].get(i);
                     q.add(e.des);
                 }
             }
         }
     }
-
 
     public static void main(String[] args) {
         int v = 7;
@@ -61,13 +62,14 @@ public class BFS {
 
         boolean visited[] = new boolean[v];
 
-        for(int i=0;i<v;i++){
-            if(visited[i] == false){
+        for (int i = 0; i < v; i++) {
+            if (visited[i] == false) {
                 bfs(graph, v, visited, i);
             }
         }
 
     }
-    
+
 }
+
 

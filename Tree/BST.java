@@ -87,11 +87,11 @@ public class BST {
     }
 
     public static void main(String[] args) {
-        int kue[] = { 5, 1, 3, 4, 2, 7 };
+        int arr[] = { 5, 1, 3, 4, 2, 7 };
         Node root = null;
 
-        for (int i = 0; i < kue.length; i++) {
-            root = insertNode(root, kue[i]);
+        for (int i = 0; i < arr.length; i++) {
+            root = insertNode(root, arr[i]);
         }
 
         System.out.print("Tree before delete: ");
@@ -106,3 +106,4 @@ public class BST {
 
     }
 }
+

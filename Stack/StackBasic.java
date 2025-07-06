@@ -25,8 +25,8 @@ public class StackBasic {
 
         // search(Object element) ---> Searches for an element and returns its position
         // from the top of the stack if not found return -1.
-        System.err.println("Position from the top of stack: " + s.search(300));
-        System.out.println("POsition of 30: " + s.search(30));
+        System.err.println("Position of 300 from the top of stack: " + s.search(300));
+        System.out.println("Position of 30: " + s.search(30));
 
         int n = s.size();
         System.out.println(s);
