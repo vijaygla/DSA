@@ -14,7 +14,7 @@ public class TypeCasting {
         // method to use the typecasting in every sitution so that no problem will generated
 
         int b = 10;
-        short number = b;
+        short number = (short) b;
         System.out.println(b);
         System.out.println(number);
 
