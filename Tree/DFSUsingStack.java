@@ -12,9 +12,9 @@ public class DFSUsingStack {
     }
 
     public static void dfs(TreeNode root) {
-        if (root == null)
+        if (root == null) {
             return;
-
+        }
         Stack<TreeNode> stack = new Stack<>();
         stack.push(root);
 
@@ -23,10 +23,12 @@ public class DFSUsingStack {
             System.out.print(curr.val + " ");
 
             // Push right first so left is processed first
-            if (curr.right != null)
+            if (curr.right != null) {
                 stack.push(curr.right);
-            if (curr.left != null)
+            }
+            if (curr.left != null) {
                 stack.push(curr.left);
+            }
         }
     }
 
@@ -41,5 +43,3 @@ public class DFSUsingStack {
         dfs(root);
     }
 }
-
-
