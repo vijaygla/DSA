@@ -1,4 +1,4 @@
-public class Main {
+public class ThreadOperation {
     public static void main(String[] args) {
 
         // // Single threading

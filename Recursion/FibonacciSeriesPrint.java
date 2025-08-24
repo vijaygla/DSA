@@ -1,5 +1,5 @@
 // // Iterative Approch
-// public class FibonacciSeries {
+// public class FibonacciSeriesPrint {
 //     public static void fib(int n){
 //         int a=0,b=1;int sum=0;
 //         System.err.println("Fibonacci Series :");
@@ -24,7 +24,7 @@
 
 
 // Recursive Approch 
-public class FibonacciSeries {
+public class FibonacciSeriesPrint {
     public static void printFibonacci(int n, int a, int b) {
         if (n > 0) {
             System.out.print(a + " ");
