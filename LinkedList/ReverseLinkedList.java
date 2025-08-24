@@ -1,4 +1,4 @@
-public class ReverseLinkedList {
+    public class ReverseLinkedList {
 
     static class ListNode {
         int val;
@@ -21,6 +21,7 @@ public class ReverseLinkedList {
             prevNode = currNode;
             currNode = nextNode;
         }
+        
         return prevNode;
     }
 
