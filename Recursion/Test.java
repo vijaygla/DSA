@@ -22,9 +22,6 @@
 
 
 
-
-
-// Ecxample 2
 // public class Test {
 //     public static void fun(int n){
 //         if(n==0){
@@ -50,7 +47,6 @@
 
 
 
-// other Example code in Recursion 
 // public class Test {
 //     public static void fun(int n) {
 //         if(n==0) {
@@ -72,25 +68,18 @@
 
 
 
-// // this function find the logn base 2
-// public class Test {
-//     public static int fun(int n ){
-//         if(n==1){
-//             return 0;
-//         }
-//         else{
-//             return 1+fun(n/2);
-//         }
-//     }
-//     public static void main(String[] args) {
-//         int n = 16 ;
-//         System.out.println("Result = "+fun(n));
-//     }
-// }
-
-// Output 
-// 4
-
-
-
+public class Test {
+    public static int fun(int n ){
+        if(n==0){
+            return 0;
+        }
+        else{
+            return 1+fun(n/2);
+        }
+    }
+    public static void main(String[] args) {
+        int n = 16 ;
+        System.out.println("Result = "+fun(n)); 
+    }
+}
 

@@ -1,11 +1,11 @@
 public class CreateTree {
 
-    static class Node {
+    static class TreeNode {
         int data;
-        Node left;
-        Node right;
+        TreeNode left;
+        TreeNode right;
 
-        Node(int data) {
+        TreeNode(int data) {
             this.data = data;
             this.left = null;
             this.right = null;
@@ -13,9 +13,9 @@ public class CreateTree {
     }
 
     // Insert the node in the tree 
-    public static Node insertNode(Node root, int val) {
+    public static TreeNode insertNode(TreeNode root, int val) {
         if (root == null) {
-            root = new Node(val);
+            root = new TreeNode(val);
             return root;
         }
 
@@ -29,7 +29,7 @@ public class CreateTree {
     }
 
     // Print the tree
-    public static void printTree(Node root) {
+    public static void printTree(TreeNode root) {
         if (root != null) {
             System.out.print(root.data + " ");
             printTree(root.left);
@@ -39,13 +39,13 @@ public class CreateTree {
 
     public static void main(String[] args) {
         int val[] = { 1, 2, 3, 4, 5 };
-        Node root = null;
+        TreeNode root = null;
 
         for (int i = 0; i < val.length; i++) {
             root = insertNode(root, val[i]);
         }
 
-        System.out.print("Tree Node: ");
+        System.out.print("Tree TreeNode: ");
         printTree(root);
     }
 }
