@@ -41,35 +41,3 @@ A heap is always a **complete binary tree**, meaning all levels are fully filled
 2. Replace with last element.
 3. Heapify down.
 
----
-
-## 📦 Applications
-
-- Priority Queues
-- Dijkstra’s Algorithm
-- Huffman Coding
-- Top-K Elements
-- Median of Stream
-
----
-
-## 💡 Priority Queue
-
-A Priority Queue is an abstract data type where each element has a **priority**. Elements with higher priority are dequeued before lower priority ones.
-
-**Implementation:** Usually done using **heaps**.
-
----
-
-## 🧮 Implementation (Java)
-
-### Min Heap using PriorityQueue:
-```java
-import java.util.PriorityQueue;
-
-PriorityQueue<Integer> minHeap = new PriorityQueue<>();
-minHeap.add(10);
-minHeap.add(5);
-minHeap.add(20);
-
-System.out.println(minHeap.poll()); // 5

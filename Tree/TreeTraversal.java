@@ -1,20 +1,20 @@
 public class TreeTraversal {
 
-  // Node of tree
-  static class Node {
+  // TreeNode of tree
+  static class TreeNode {
     int data;
-    Node left;
-    Node right;
+    TreeNode left;
+    TreeNode right;
 
-    Node(int data) {
+    TreeNode(int data) {
       this.data = data;
       this.left = null;
       this.right = null;
     }
   }
 
-  // Pre-order Traversal 
-  public static void preOrder(Node root) {
+  // Pre-order Traversal
+  public static void preOrder(TreeNode root) {
     if (root == null) {
       return;
     }
@@ -24,7 +24,7 @@ public class TreeTraversal {
   }
 
   // In-order Traversal
-  public static void inOrder(Node root) {
+  public static void inOrder(TreeNode root) {
     if (root == null) {
       return;
     }
@@ -34,7 +34,7 @@ public class TreeTraversal {
   }
 
   // Post-order Traversal
-  public static void postOrder(Node root) {
+  public static void postOrder(TreeNode root) {
     if (root == null) {
       return;
     }
@@ -44,18 +44,18 @@ public class TreeTraversal {
   }
 
   public static void main(String[] args) {
-    //          10
-    //         /  \
-    //        5    15
-    //       / \   / \
-    //      3   7 12  18
-    Node root = new Node(10);
-    root.left = new Node(5);
-    root.right = new Node(15);
-    root.left.left = new Node(3);
-    root.left.right = new Node(7);
-    root.right.left = new Node(12);
-    root.right.right = new Node(18);
+    // 10
+    // / \
+    // 5 15
+    // / \ / \
+    // 3 7 12 18
+    TreeNode root = new TreeNode(10);
+    root.left = new TreeNode(5);
+    root.right = new TreeNode(15);
+    root.left.left = new TreeNode(3);
+    root.left.right = new TreeNode(7);
+    root.right.left = new TreeNode(12);
+    root.right.right = new TreeNode(18);
 
     System.out.print("Pre-order Traversal: ");
     preOrder(root);
