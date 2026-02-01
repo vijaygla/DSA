@@ -1,2 +1,0 @@
-1. To count how many bit we have to set  to make a binary number to other binary number make xor between them and in resultant cout the number of 1.
-2. To count result from point 1 taken and ```count = count + result & 1;``` then `and result >> 1`  ;
